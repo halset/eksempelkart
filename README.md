@@ -18,10 +18,25 @@ Se på `S52_SYMBOL_135`. Den takler kun symboler rotert til 135 grader, men med 
 
 Roteringen stemmer ikke helt pga projeksjon. Det bør kanskje løses ved å introdusere en `ROTATE_CRS` som gjør om rotasjonsverdien fra storsirkel til skjerm for det aktuelle stedet og den aktuelle projeksjonen.
 
-NB: [data-driven styling](https://www.mapbox.com/help/gl-dds-ref/) virker dessverre foreløpig kun på JS, men det er [ikke lenge til den også virker i Native på iOS og Android](https://github.com/mapbox/mapbox-gl-native/pull/7372).
+[Data-driven styling](https://www.mapbox.com/help/gl-dds-ref/) virker dessverre foreløpig kun på JS, men det er [ikke lenge til den også virker i Native på iOS og Android](https://github.com/mapbox/mapbox-gl-native/pull/7372).
 
 ### Oppgave 4 - forbedre kartet
 
 Finn ut hvordan kartet kan bli bedre og prøv å få det til. Bruk [Mapbox Style Specification](https://www.mapbox.com/mapbox-gl-style-spec/).
 
-Bonus: prøv å lag en GitHUB pull-request med endringsforslag.
+Bonus 1: prøv å bruke git til å rulle tilbake når noe går galt.
+Bonus 2: prøv å lag en GitHUB pull-request med endringsforslag.
+
+### Oppgave 5 - Norge i Bilder
+
+* Kopier `index.html` og `style.json` til nye filer og endre i html-filen så den peker på rett json.
+* Legg til Norge i Bilder som en source. Bruk URLen `https://kartverket.maplytic.no/tile/_nib/{z}/{x}/{y}.jpeg` for automatisk håndtering av gatekeeper tokens.
+* Legg til et layer for Norge i Bilder rett etter `background` med et innhold ala
+````
+    {
+            "id": "nib",
+            "type": "raster",
+            "source": "nib"
+    }
+````
+* Fjern de gamle `landcover_*` og kanskje noen hus for å se Norge i Bilder.
