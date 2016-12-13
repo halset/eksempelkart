@@ -23,6 +23,7 @@
 <body>
 
 <div id='map'></div>
+<pre id='features'></pre>
 
 <script>
 
@@ -40,7 +41,23 @@ mapboxgl.util.getJSON('style.json', function (err, style) {
     zoom: 12
   });
 
-  map.addControl(new mapboxgl.NavigationControl());  
+  map.addControl(new mapboxgl.NavigationControl());
+  
+  map.on('mousemove', function(e) {
+  	var features = map.queryRenderedFeatures(e.point);
+
+  	// display sosi features, not colors and such
+  	var toDisplay = [];
+  	for (var i = 0; i < features.length; i++) {
+  		var feature = features[i];
+  		toDisplay.push({
+  			'feature-type': feature.layer['source-layer'],
+  			'properties': feature.properties
+  		});
+  	}
+
+  	document.getElementById('features').innerHTML = JSON.stringify(toDisplay, null, 2);
+  });
   
 });
 
