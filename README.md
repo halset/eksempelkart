@@ -20,13 +20,13 @@ Roteringen stemmer ikke helt pga projeksjon. Det bør kanskje løses ved å intr
 
 [Data-driven styling](https://www.mapbox.com/help/gl-dds-ref/) virker dessverre foreløpig kun på JS, men det er [ikke lenge til den også virker i Native på iOS og Android](https://github.com/mapbox/mapbox-gl-native/pull/7372).
 
-### Oppgave 4 - forbedre kartet
-
-Finn ut hvordan kartet kan bli bedre og prøv å få det til. Bruk [Mapbox Style Specification](https://www.mapbox.com/mapbox-gl-style-spec/).
-
-### Oppgave 5 - Norge i Bilder
+### Oppgave 4 - Norge i Bilder
 
 * Kopier `index.html` og `style.json` til nye filer og endre i html-filen så den peker på rett json.
 * Legg til Norge i Bilder som en source. Bruk URLen `https://kartverket.maplytic.no/tile/_nib/{z}/{x}/{y}.jpeg` for automatisk håndtering av gatekeeper tokens.
 * Legg til et layer for Norge i Bilder rett etter `background` med et innhold ala `{ "id": "nib", "type": "raster", "source": "nib" }`
 * Fjern de gamle `landcover_*` og kanskje noen hus for å se Norge i Bilder.
+
+### Oppgave 5 - forbedre kartet
+
+Finn ut hvordan kartene kan bli bedre og prøv å få det til. Bruk [Mapbox Style Specification](https://www.mapbox.com/mapbox-gl-style-spec/).
