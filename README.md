@@ -14,8 +14,14 @@ Bruk [Mapbox Style Specification](https://www.mapbox.com/mapbox-gl-style-spec/) 
 
 ### Oppgave 3 - roterte symboler med data-driven styling
 
-Se på `S52_SYMBOL_135`. Den takler kun symboler rotert til 135 grader, men med [data-driven styling](https://www.mapbox.com/help/gl-dds-ref/) kan den endres til `S52_SYMBOL_ROTATE` og så heller bruke egenskapen `ROTATE`. Prøv det og se om det virker med `RCTLPT` rest vest for Mortavika-Arsvågen.
+Se på `S52_SYMBOL_135`. Den takler kun symboler rotert til 135 grader, men med [data-driven styling](https://www.mapbox.com/help/gl-dds-ref/) kan den endres til `S52_SYMBOL_ROTATE` og så heller bruke egenskapen `ROTATE` og dermed fungere for alle vinkler. Prøv det og se om det virker med `RCTLPT`-pilene vest for Mortavika-Arsvågen.
 
 Roteringen stemmer ikke helt pga projeksjon. Det bør kanskje løses ved å introdusere en `ROTATE_CRS` som gjør om rotasjonsverdien fra storsirkel til skjerm for det aktuelle stedet og den aktuelle projeksjonen.
 
-NB: [data-driven styling](https://www.mapbox.com/help/gl-dds-ref/) virker dessverre foreløpig kun på JS, ikke Native (iOS + Android).
+NB: [data-driven styling](https://www.mapbox.com/help/gl-dds-ref/) virker dessverre foreløpig kun på JS, men det er [ikke lenge til den også virker i Native på iOS og Android](https://github.com/mapbox/mapbox-gl-native/pull/7372).
+
+### Oppgave 4 - forbedre kartet
+
+Finn ut hvordan kartet kan bli bedre og prøv å få det til. Bruk [Mapbox Style Specification](https://www.mapbox.com/mapbox-gl-style-spec/).
+
+Bonus: prøv å lag en GitHUB pull-request med endringsforslag.
