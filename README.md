@@ -24,9 +24,6 @@ Roteringen stemmer ikke helt pga projeksjon. Det bør kanskje løses ved å intr
 
 Finn ut hvordan kartet kan bli bedre og prøv å få det til. Bruk [Mapbox Style Specification](https://www.mapbox.com/mapbox-gl-style-spec/).
 
-Bonus 1: prøv å bruke git til å rulle tilbake når noe går galt.
-Bonus 2: prøv å lag en GitHUB pull-request med endringsforslag.
-
 ### Oppgave 5 - Norge i Bilder
 
 * Kopier `index.html` og `style.json` til nye filer og endre i html-filen så den peker på rett json.
