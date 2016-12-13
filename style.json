@@ -5,13 +5,9 @@
       "type": "vector",
       "tiles":[ "http://kartverket-vt.ecc.no/dgds/vectortile_ip/wmsuser/cells/{z}/{x}/{y}.mvt" ]
     },
-    "vbase": {
-      "type": "vector",
-      "url": "https://cdn.maplytic.no/kartverket.maplytic.no/tile/vbase.json?vbase:zoom=13-20&featuretype=[OBJTYPE]&store=true"
-    },
     "sosi": {
       "type": "vector",
-      "url": "https://cdn.maplytic.no/kartverket.maplytic.no/tile/sosi_n50,sosi_n250,sosi_n1000,sosi_n2000,sosi_n5000.json?sosi_n50:zoom=12-20&sosi_n250:zoom=10-11&sosi_n1000:zoom=7-9&sosi_n2000:zoom=5-6&sosi_n5000:zoom=0-4&featuretype=[OBJTYPE]&store=true"
+      "url": "https://cdn.maplytic.no/kartverket.maplytic.no/tile/vbase,sosi_n50,sosi_n250,sosi_n1000,sosi_n2000,sosi_n5000.json?vbase:zoom=13-20&sosi_n50:zoom=12-20&sosi_n250:zoom=10-11&sosi_n1000:zoom=7-9&sosi_n2000:zoom=5-6&sosi_n5000:zoom=0-4&featuretype=[OBJTYPE]&store=true"
     }
   },
   "sprite": "https://cdn.maplytic.no/kartverket.maplytic.no/dnl/sprite/combined",
@@ -358,7 +354,7 @@
     {
       "id": "vbase-VegSenterlinje",
       "type": "line",
-      "source": "vbase",
+      "source": "sosi",
       "source-layer": "VegSenterlinje",
       "minzoom": 13,
       "filter": [
@@ -401,7 +397,7 @@
     {
       "id": "vbase-Kjørebane",
       "type": "line",
-      "source": "vbase",
+      "source": "sosi",
       "source-layer": "Kjørebane",
       "minzoom": 13,
       "filter": [
@@ -444,7 +440,7 @@
     {
       "id": "vbase-VegSenterlinje-Tunell",
       "type": "line",
-      "source": "vbase",
+      "source": "sosi",
       "source-layer": "VegSenterlinje",
       "minzoom": 13,
       "filter": [
@@ -480,7 +476,7 @@
     {
       "id": "vbase-Kjørebane-Tunell",
       "type": "line",
-      "source": "vbase",
+      "source": "sosi",
       "source-layer": "Kjørebane",
       "minzoom": 13,
       "filter": [
@@ -516,7 +512,7 @@
     {
       "id": "vbase-VegSenterlinje-label",
       "type": "symbol",
-      "source": "vbase",
+      "source": "sosi",
       "source-layer": "VegSenterlinje",
       "minzoom": 13,
       "filter": [
