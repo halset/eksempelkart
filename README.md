@@ -31,12 +31,5 @@ Bonus 2: prøv å lag en GitHUB pull-request med endringsforslag.
 
 * Kopier `index.html` og `style.json` til nye filer og endre i html-filen så den peker på rett json.
 * Legg til Norge i Bilder som en source. Bruk URLen `https://kartverket.maplytic.no/tile/_nib/{z}/{x}/{y}.jpeg` for automatisk håndtering av gatekeeper tokens.
-* Legg til et layer for Norge i Bilder rett etter `background` med et innhold ala
-````
-    {
-            "id": "nib",
-            "type": "raster",
-            "source": "nib"
-    }
-````
+* Legg til et layer for Norge i Bilder rett etter `background` med et innhold ala `{ "id": "nib", "type": "raster", "source": "nib" }`
 * Fjern de gamle `landcover_*` og kanskje noen hus for å se Norge i Bilder.
