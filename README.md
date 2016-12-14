@@ -26,6 +26,7 @@ Roteringen stemmer ikke helt pga projeksjon. Det bør kanskje løses ved å intr
 * Legg til Norge i Bilder som en source. Bruk URLen `https://kartverket.maplytic.no/tile/_nib/{z}/{x}/{y}.jpeg` for automatisk håndtering av gatekeeper tokens.
 * Legg til et layer for Norge i Bilder rett etter `background` med et innhold ala `{ "id": "nib", "type": "raster", "source": "nib" }`
 * Fjern de gamle `landcover_*` og kanskje noen hus for å se Norge i Bilder.
+* Sett fornuftig `maxzoom` for å unngå hvit skjerm når man zoomer for langt inn.
 
 ### Oppgave 5 - forbedre kartet
 
