@@ -25,7 +25,7 @@ Roteringen stemmer ikke helt pga projeksjon. Det bør kanskje løses ved å intr
 ### Oppgave 4 - Norge i Bilder
 
 * Kopier `index.html` og `style.json` til nye filer og endre i html-filen så den peker på rett json.
-* Legg til Norge i Bilder som en source. Bruk URLen `https://lznorth.maplytic.no/tile/_orto/{z}/{x}/{y}.jpeg` for automatisk håndtering av gatekeeper tokens.
+* Legg til Norge i Bilder som en source. Bruk URLen `https://kartverket.maplytic.no/tile/_nib/{z}/{x}/{y}.jpeg` for automatisk håndtering av gatekeeper tokens.
 * Legg til et layer for Norge i Bilder rett etter `background` med et innhold ala `{ "id": "nib", "type": "raster", "source": "nib" }`
 * Fjern de gamle `landcover_*` og kanskje noen hus for å se Norge i Bilder.
 * Sett fornuftig `maxzoom` for å unngå hvit skjerm når man zoomer for langt inn.
@@ -50,7 +50,7 @@ Finn ut hvordan kartene kan bli bedre og prøv å få det til. Bruk [Mapbox Styl
         ]
     }
 ```
-* Lag en layer Mapbox GL stilen som definerer tegnereglene.
+* Lag en layer i Mapbox GL stilen som definerer tegnereglene.
 * Legg til CORS-headere i GeoServer om det mangler.
 
 ### Oppgave 7 - en annen klient
