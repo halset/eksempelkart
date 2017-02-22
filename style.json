@@ -3,7 +3,7 @@
   "sources": {
     "s57": {
       "type": "vector",
-      "tiles":[ "https://kartverket-vt.ecc.no/dgds/vectortile_ip/wmsuser/cells/{z}/{x}/{y}.mvt" ]
+      "tiles":[ "https://d1ulo5ruqppg6j.cloudfront.net/dgds/vectortile_ip/wmsuser/cells/{z}/{x}/{y}.mvt" ]
     },
     "sosi": {
       "type": "vector",
