@@ -33,3 +33,12 @@ Roteringen stemmer ikke helt pga projeksjon. Det bør kanskje løses ved å intr
 ### Oppgave 5 - forbedre kartet
 
 Finn ut hvordan kartene kan bli bedre og prøv å få det til. Bruk [Mapbox Style Specification](https://www.mapbox.com/mapbox-gl-style-spec/).
+
+### Oppgave 6 - en annen klient
+
+Se på et av eksemplene til [Leaflet.VectorGrid](https://github.com/Leaflet/Leaflet.VectorGrid) og prøv å tilpass den til å bruke 
+en annen tile server.
+
+### Oppgave 7 - en annen tile server
+
+Sett opp f.eks. [GeoServer](http://docs.geoserver.org/latest/en/user/extensions/vectortiles/tutorial.html) eller [Mapserver](https://github.com/mapserver/mapserver/pull/5376) med vector tiles.
