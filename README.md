@@ -34,10 +34,25 @@ Roteringen stemmer ikke helt pga projeksjon. Det bør kanskje løses ved å intr
 
 Finn ut hvordan kartene kan bli bedre og prøv å få det til. Bruk [Mapbox Style Specification](https://www.mapbox.com/mapbox-gl-style-spec/).
 
-### Oppgave 6 - en annen klient
+### Oppgave 6 - GeoServer med vector tiles
+
+* Last ned GeoServer 2.11 og tilhørende vectortiles-plugin fra [her](http://ares.boundlessgeo.com/geoserver/master/)
+* Installer og start GeoServer med vectortiles-plugin
+* Publiser et dataset
+* Slå på caching av datasettet også i formatet application/x-protobuf;type=mapbox-vector
+* Se på TMS capabilities og finn URL til publisert datasett i rett format og koordinatsystem. Bruk det med "/{z}/{x}/{y}.pbf" som en source med `"scheme": "tms"` i Mapbox GL. Da blir det noe ala dette
+```
+  "countries": {
+    "type": "vector",
+    "scheme": "tms",
+    "tiles": [
+      "http://127.0.0.1:8080/geoserver/gwc/service/tms/1.0.0/tore%3Acountries@EPSG%3A900913@pbf/{z}/{x}/{y}.pbf" 
+        ]
+    }
+```
+* Lag en layer Mapbox GL stilen som definerer tegnereglene.
+* Legg til CORS-headere i GeoServer om det mangler.
+
+### Oppgave 7 - en annen klient
 
 Se på et av eksemplene til [Leaflet.VectorGrid](https://github.com/Leaflet/Leaflet.VectorGrid) og prøv å tilpass den til å bruke en annen tile server. Eller følg [denne tutorialen](http://docs.geoserver.org/latest/en/user/extensions/vectortiles/tutorial.html) for å prøve GeoServer med OpenLayers.
-
-### Oppgave 7 - en annen tile server
-
-Sett opp f.eks. [GeoServer](http://docs.geoserver.org/latest/en/user/extensions/vectortiles/tutorial.html) eller [Mapserver](https://github.com/mapserver/mapserver/pull/5376) med vector tiles.
