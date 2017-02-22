@@ -36,7 +36,7 @@ Finn ut hvordan kartene kan bli bedre og prøv å få det til. Bruk [Mapbox Styl
 
 ### Oppgave 6 - en annen klient
 
-Se på et av eksemplene til [Leaflet.VectorGrid](https://github.com/Leaflet/Leaflet.VectorGrid) og prøv å tilpass den til å bruke en annen tile server.
+Se på et av eksemplene til [Leaflet.VectorGrid](https://github.com/Leaflet/Leaflet.VectorGrid) og prøv å tilpass den til å bruke en annen tile server. Eller følg [denne tutorialen](http://docs.geoserver.org/latest/en/user/extensions/vectortiles/tutorial.html) for å prøve GeoServer med OpenLayers.
 
 ### Oppgave 7 - en annen tile server
 
