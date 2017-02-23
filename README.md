@@ -52,7 +52,21 @@ Finn ut hvordan kartene kan bli bedre og prøv å få det til. Bruk [Mapbox Styl
 ```
 * Lag en layer i Mapbox GL stilen som definerer tegnereglene.
 * Legg til CORS-headere i GeoServer om det mangler.
+* GeoServer bør oppgradere til nyere java-vector-tile for vector tile spec v2.
 
-### Oppgave 7 - en annen klient
+### Oppgave 7 - Mapserver med vector tiles
+
+* clon https://github.com/mapserver/mapserver/pull/5376 og pass på at du er i rett branch
+* bygg
+```
+mkdir build ; cd build
+cmake -DCMAKE_INSTALL_PREFIX=/usr/local ../
+make
+sudo make install
+```
+* Da er `application/x-protobuf` et tilgjengelig wms format
+* Hvordan få xyz/tms url?
+
+### Oppgave 8 - en annen klient
 
 Se på et av eksemplene til [Leaflet.VectorGrid](https://github.com/Leaflet/Leaflet.VectorGrid) og prøv å tilpass den til å bruke en annen tile server. Eller følg [denne tutorialen](http://docs.geoserver.org/latest/en/user/extensions/vectortiles/tutorial.html) for å prøve GeoServer med OpenLayers.
